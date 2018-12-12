@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:8
+FROM openjdk:11.0.1
 
 # Base system dependencies
 ARG DEBIAN_FRONTEND=noninteractive
