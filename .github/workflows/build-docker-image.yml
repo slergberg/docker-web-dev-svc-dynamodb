@@ -16,4 +16,4 @@ jobs:
         with:
           args: build --file Dockerfile --tag ${DOCKER_IMAGE_NAME} .
         env:
-          DOCKER_IMAGE_NAME: ${GITHUB_REPOSITORY##*/docker-web-dev-svc-}
+          DOCKER_IMAGE_NAME: ${{ GITHUB_REPOSITORY##*/docker-web-dev-svc- }}
