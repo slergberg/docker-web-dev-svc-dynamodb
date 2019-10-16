@@ -1,14 +1,11 @@
 # Base image
-FROM openjdk:8
+FROM openjdk:14-alpine
 
 # Base system dependencies
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update \
-  && apt-get install -y \
+RUN apk add --no-cache \
     curl \
     git \
-    tar \
-  && rm -rf /var/lib/apt/lists/*
+    tar
 
 # Application server
 RUN mkdir /application
