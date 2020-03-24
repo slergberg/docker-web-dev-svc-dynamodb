@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:14-alpine
+FROM openjdk:15-alpine
 
 # Base system dependencies
 RUN apk add --no-cache \
